@@ -872,9 +872,6 @@ class RTMedia {
 
 		global $rtmedia_ajax;
 		$rtmedia_ajax = new RTMediaAJAX();
-		//API Classes
-		global $rtmediajsonapi;
-		$rtmediajsonapi = new RTMediaJsonApi();
 
 		if( function_exists( 'rtmedia_enable_comment_media_uplaod' ) ){
 			rtmedia_enable_comment_media_uplaod();

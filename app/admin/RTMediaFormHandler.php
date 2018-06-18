@@ -578,17 +578,6 @@ class RTMediaFormHandler {
 				'depends'       => 'rtmedia_add_linkback',
 				'after_content' => esc_html__( 'Signup for', 'buddypress-media' ) . ' rtMedia ' . esc_html__( 'affiliate program', 'buddypress-media' ) . ' <a href="https://rtmedia.io/affiliates/">' . esc_html__( 'here', 'buddypress-media' ) . '</a>',
 			), //
-			'rtmedia_enable_api'    => array(
-				'title'         => esc_html__( 'Enable JSON API', 'buddypress-media' ),
-				'callback'      => array( 'RTMediaFormHandler', 'checkbox' ),
-				'args'          => array(
-					'key'   => 'rtmedia_enable_api',
-					'value' => $options['rtmedia_enable_api'],
-					'desc'  => esc_html__( 'This will allow handling API requests for rtMedia sent through any mobile app.', 'buddypress-media' ),
-				),
-				'group'         => 80,
-				'after_content' => esc_html__( 'You can refer to the API document from', 'buddypress-media' ) . ' <a href="https://rtmedia.io/docs/developers/json-api/">' . esc_html__( 'here', 'buddypress-media' ) . '</a>',
-			), //
 		);
 
 		return $render;
@@ -608,7 +597,6 @@ class RTMediaFormHandler {
 		$render_options     = apply_filters( 'rtmedia_general_content_add_itmes', $render_options, $options );
 		$general_group      = array();
 		$general_group[10]  = esc_html__( 'Admin Settings', 'buddypress-media' );
-		$general_group[80]  = esc_html__( 'API Settings', 'buddypress-media' );
 		$general_group[90]  = esc_html__( 'Miscellaneous', 'buddypress-media' );
 		$general_group[100] = esc_html__( 'Footer Link', 'buddypress-media' );
 		$general_group      = apply_filters( 'rtmedia_general_content_groups', $general_group );
